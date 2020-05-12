@@ -35,7 +35,7 @@ This section describes how to specify Microsoft Message Queuing (also known as M
 |--------------------|-------------------------|  
 |Public queue|*Computername*\QueueName|  
 |Private queue|*Computername*\Private$\QueueName|  
-|Journal queue|*Computername*\QueueName\Journal$|  
+|Journal queue|*Computername*\QueueName;Journal|  
 |Computer journal queue **Note:**  Use for receive queue only.|*Computername*\Journal$|  
 |Computer dead-letter queue **Note:**  Use for receive queue only.|*Computername*\Deadletter$|  
 |Computer transaction dead-letter queue **Note:**  Use for receive queue only.|*Computername*\XactDeadletter$|  
@@ -48,7 +48,7 @@ This section describes how to specify Microsoft Message Queuing (also known as M
 |**Format type**|**Syntax for format name**|  
 |---------------------|--------------------------------|  
 |Public|*FormatName*:Public=QueueGUID|  
-|Direct|*FormatName*:DIRECT=SPX:NetworkNumber:HostNumber\QueueName<br /><br /> *FormatName*: DIRECT=TCP:IPAddress\QueueName<br /><br /> *FormatName*: DIRECT=OS:ComputerName\QueueName|  
+|Direct|*FormatName*:DIRECT=SPX:NetworkNumber:HostNumber\QueueName<br /><br /> *FormatName*: DIRECT=TCP:IPAddress\QueueName<br /><br /> *FormatName*: DIRECT=OS:ComputerName\QueueName<br /><br /> *FormatName*: Direct=OS:\Computername\QueueName;Journal|  
   
  If the send port queue path is a distribution list, then the queue path syntax is:  
   
